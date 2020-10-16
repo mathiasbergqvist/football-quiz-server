@@ -1,10 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const Score = require("./models/Score");
+const teams = require("./data/teams");
 
 // Get all teams
-router.get("/foo", (req, res, next) => {
-  res.json(["Ziggy", "Lemmy"]);
+router.get("/teams", (req, res, next) => {
+  res.json(teams);
+});
+
+// Get team by id
+router.get("/teams/:id", (req, res, next) => {
+  console.log("req.params.id", req.params.id);
+  const matchingTeam = teams.find(
+    (team) => team.id === parseInt(req.params.id)
+  );
+  if (matchingTeam !== undefined) {
+    res.json(matchingTeam);
+  } else {
+    res.sendStatus(404);
+  }
 });
 
 // Get all scores

@@ -4,6 +4,7 @@ const cors = require("cors");
 const routes = require("./routes");
 const morgan = require("morgan");
 const helmet = require("helmet");
+const basicAuth = require("express-basic-auth");
 require("dotenv").config({ path: "variables.env" });
 
 // Connect to the MongoDB database
@@ -24,8 +25,22 @@ mongoose
     app.use(morgan("combined"));
     // adding Helmet to enhance your API's security
     app.use(helmet());
+    // Setup basic auth
+    const username = process.env.BASIC_AUTH_USERNAME;
+    const password = process.env.BASIC_AUTH_PASSWORD;
+    const users = {};
+    users[username] = password;
+    app.use(
+      basicAuth({
+        users,
+        unauthorizedResponse: {
+          message: "Bad credentials",
+        },
+      })
+    );
     // Add routes
     app.use("/api", routes);
+    // Start server
     app.listen(5050, () => {
       console.log("🚀 Server has started on port 5050.");
     });

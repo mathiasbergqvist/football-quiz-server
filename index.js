@@ -13,7 +13,8 @@ mongoose
     console.log("🔌 DB connected");
 
     const app = express();
-    app.use("/api", routes);
+    app.use(express.json()); // Handle request bodies in json format
+    app.use("/api", routes); // Add routes
     app.listen(5050, () => {
       console.log("🚀 Server has started on port 5050.");
     });

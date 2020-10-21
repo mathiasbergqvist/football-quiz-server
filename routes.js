@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Score = require("./models/Score");
 const teams = require("./data/teams");
+const { body, validationResult } = require("express-validator");
 
 // Get all teams
 router.get("/teams", (req, res, next) => {
@@ -10,7 +11,6 @@ router.get("/teams", (req, res, next) => {
 
 // Get team by id
 router.get("/teams/:id", (req, res, next) => {
-  console.log("req.params.id", req.params.id);
   const matchingTeam = teams.find(
     (team) => team.id === parseInt(req.params.id)
   );
@@ -28,13 +28,26 @@ router.get("/scores", async (req, res) => {
 });
 
 // Create new score entry
-router.post("/scores", async (req, res) => {
-  const score = new Score({
-    name: req.body.name,
-    score: req.body.score,
-  });
-  await score.save();
-  res.send(score);
-});
+router.post(
+  "/scores",
+  [
+    body("name").isLength({ min: 3 }).trim().escape(),
+    body("score").isNumeric().trim().escape(),
+  ],
+  async (req, res) => {
+    // Finds the validation errors in this request and wraps them in an object with handy functions
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    } else {
+      const score = new Score({
+        name: req.body.name,
+        score: req.body.score,
+      });
+      await score.save();
+      res.send(score);
+    }
+  }
+);
 
 module.exports = router;

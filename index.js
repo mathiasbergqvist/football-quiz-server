@@ -41,8 +41,8 @@ mongoose
     // Add routes
     app.use("/api", routes);
     // Start server
-    app.listen(5050, () => {
-      console.log("🚀 Server has started on port 5050.");
+    app.listen(process.env.PORT, () => {
+      console.log(`🚀 Server has started on port ${process.env.PORT}.`);
     });
   })
   .catch((err) => console.error(err));

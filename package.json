@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon /index.js localhost 5050",
-    "start": "node index.js"
+    "start": "node index.js",
+    "deploy": "git push heroku main",
+    "logs": "heroku logs --tail"
   },
   "keywords": [],
   "author": "",

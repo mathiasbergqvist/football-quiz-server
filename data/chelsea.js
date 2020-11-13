@@ -97,4 +97,4 @@ const chelsea = {
   ],
 };
 
-module.export = chelsea;
+module.exports = chelsea;

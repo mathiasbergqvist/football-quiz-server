@@ -97,4 +97,4 @@ const manchesterCity = {
   ],
 };
 
-module.export = manchesterCity;
+module.exports = manchesterCity;

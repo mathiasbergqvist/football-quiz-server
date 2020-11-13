@@ -1,5 +1,5 @@
 const manchesterUnited = {
-  id: 6,
+  id: 5,
   name: "Manchester United",
   manager: "Solskjaer",
   arena: "Old Trafford",
@@ -11,32 +11,20 @@ const manchesterUnited = {
       position: "Goalkeeper",
     },
     {
+      name: "Shaw",
+      number: "23",
+      county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      position: "Defender",
+    },
+    {
       name: "Nilsson-Lindelöf",
       number: "2",
       county: "🇸🇪",
       position: "Defender",
     },
     {
-      name: "Bailly",
-      number: "3",
-      county: "🇨🇮",
-      position: "Defender",
-    },
-    {
-      name: "Jones",
-      number: "4",
-      county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      position: "Defender",
-    },
-    {
       name: "Maguire",
       number: "5",
-      county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      position: "Defender",
-    },
-    {
-      name: "Shaw",
-      number: "23",
       county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       position: "Defender",
     },
@@ -47,9 +35,21 @@ const manchesterUnited = {
       position: "Defender",
     },
     {
+      name: "Bailly",
+      number: "3",
+      county: "🇨🇮",
+      position: "Defender",
+    },
+    {
       name: "Williams",
       number: "53",
       county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      position: "Defender",
+    },
+    {
+      name: "Telles",
+      number: "27",
+      county: "🇧🇷",
       position: "Defender",
     },
     {
@@ -59,39 +59,15 @@ const manchesterUnited = {
       position: "Midfielder",
     },
     {
-      name: "Mata",
-      number: "8",
-      county: "🇪🇸",
-      position: "Midfielder",
-    },
-    {
-      name: "Lingaard",
-      number: "14",
-      county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      position: "Midfielder",
-    },
-    {
-      name: "Fred",
-      number: "17",
-      county: "🇧🇷",
+      name: "Matic",
+      number: "31",
+      county: "🇷🇸",
       position: "Midfielder",
     },
     {
       name: "Fernandes",
       number: "18",
       county: "🇵🇹",
-      position: "Midfielder",
-    },
-    {
-      name: "James",
-      number: "21",
-      county: "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-      position: "Midfielder",
-    },
-    {
-      name: "Matic",
-      number: "31",
-      county: "🇷🇸",
       position: "Midfielder",
     },
     {
@@ -104,6 +80,24 @@ const manchesterUnited = {
       name: "Van Der Beek",
       number: "39",
       county: "🇳🇱",
+      position: "Midfielder",
+    },
+    {
+      name: "Mata",
+      number: "8",
+      county: "🇪🇸",
+      position: "Midfielder",
+    },
+    {
+      name: "Fred",
+      number: "17",
+      county: "🇧🇷",
+      position: "Midfielder",
+    },
+    {
+      name: "James",
+      number: "21",
+      county: "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
       position: "Midfielder",
     },
     {

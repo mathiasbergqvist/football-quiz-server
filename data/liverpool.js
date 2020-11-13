@@ -1,5 +1,5 @@
 const liverpool = {
-  id: 4,
+  id: 3,
   name: "Liverpool",
   manager: "Klopp",
   arena: "Anfiled",
@@ -9,6 +9,12 @@ const liverpool = {
       number: "1",
       county: "🇧🇷",
       position: "Goalkeeper",
+    },
+    {
+      name: "Robertson",
+      number: "26",
+      county: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      position: "Defender",
     },
     {
       name: "Van Dijk",
@@ -23,16 +29,16 @@ const liverpool = {
       position: "Defender",
     },
     {
-      name: "Robertson",
-      number: "26",
-      county: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-      position: "Defender",
-    },
-    {
       name: "Alexander-Arnold",
       number: "66",
       county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       position: "Defender",
+    },
+    {
+      name: "Henderson",
+      number: "14",
+      county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      position: "Midfielder",
     },
     {
       name: "Fabinho",
@@ -50,12 +56,6 @@ const liverpool = {
       name: "Keita",
       number: "8",
       county: "🇬🇳",
-      position: "Midfielder",
-    },
-    {
-      name: "Henderson",
-      number: "14",
-      county: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       position: "Midfielder",
     },
     {
